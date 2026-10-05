@@ -11,7 +11,7 @@
 添加规则集，URL 填写：
 
 ```
-https://raw.githubusercontent.com/<你的用户名>/<仓库名>/main/egern/advertising.yaml
+https://raw.githubusercontent.com/Juziiz/Egern-rules/main/egern/advertising.yaml
 ```
 
 动作选择 **REJECT**。
