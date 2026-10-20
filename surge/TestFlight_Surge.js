@@ -97,7 +97,7 @@ function httpGet(url, ua) {
           "TestFlight 有名额了！",
           appName ? `${appName} (${appId})` : `ID: ${appId}`,
           "🚀 探测到新名额，请立即点击加入测试",
-          { "open-url": url }
+          { action: "open-url", url }
         );
       } else {
         console.log(`[?] ${appId} → 状态未知`);
