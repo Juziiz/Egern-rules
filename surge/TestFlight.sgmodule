@@ -1,0 +1,6 @@
+#!name=TestFlight 名额监控
+#!desc=每分钟检查 Quantumult X 的 TestFlight 名额，有空位立刻弹窗通知，点通知直达加入页（Egern 版移植，原作 IBL3ND）
+#!author=IBL3ND / Surge 移植版
+
+[Script]
+TF名额监控 = type=cron, cronexp="* * * * *", script-path=https://raw.githubusercontent.com/Juziiz/Egern-rules/main/surge/TestFlight_Surge.js, argument=TF=VCIvwk2g
