@@ -1,6 +1,8 @@
 #!name=TestFlight 名额监控
-#!desc=每分钟检查 Quantumult X 的 TestFlight 名额，有空位立刻弹窗通知，点通知直达加入页（Egern 版移植，原作 IBL3ND）
+#!desc=监控 TestFlight 名额，有空位立刻弹窗通知，点通知直达加入页。启用或编辑本模块时可在参数表中修改监控目标与检查周期（支持每秒/每分钟/每小时）。原作 IBL3ND，Surge 移植版。
 #!author=IBL3ND / Surge 移植版
+#!arguments=TF:VCIvwk2g,CRON:* * * * *
+#!arguments-desc=TF=要监控的邀请码，多个用中文逗号，隔开，可写 邀请码@应用名；CRON=检查周期：每秒填 * * * * * *（六段式，疯狗模式，会触发Surge耗电警告），每分钟填 * * * * *，每5分钟填 */5 * * * *，每30分钟填 */30 * * * *，每小时填 0 * * * *
 
 [Script]
-TF名额监控 = type=cron, cronexp="* * * * *", script-path=https://raw.githubusercontent.com/Juziiz/Egern-rules/main/surge/TestFlight_Surge.js, argument=TF=VCIvwk2g
+TF名额监控 = type=cron, cronexp="{{{CRON}}}", script-path=https://raw.githubusercontent.com/Juziiz/Egern-rules/main/surge/TestFlight_Surge.js, argument="TF={{{TF}}}", timeout=30
