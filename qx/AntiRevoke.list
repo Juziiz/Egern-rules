@@ -2,20 +2,20 @@
 # 用途：屏蔽苹果证书吊销/状态查询服务器，防侧载证书被吊销
 # 用法：在 QX 的 [filter_remote] 里以 force-policy=reject 订阅本文件；在 QX 资源列表里可随时开关
 # 注意：其中 ppq 两条会拦死 iOS 的「验证 App」——验证新装/续签的 App 前，先在 QX 里停用本规则集，验完再打开
-host, ocsp.apple.com
-host, ocsp2.apple.com
-host, valid.apple.com
-host, ppq.apple.com
-host, ppq-ext.v.aaplimg.com
-host, crl.apple.com
-host, certs.apple.com
-host, ocsp.digicert.com
-host, ocsp.digicert.cn
-host, crl3.digicert.com
-host, crl4.digicert.com
-host, ocsp.entrust.net
-host, crl.entrust.net
-host, ocsp.sectigo.com
-host, crl.sectigo.com
-host, ocsp.usertrust.com
-host, crl.usertrust.com
+HOST,ocsp.apple.com,AntiRevoke
+HOST,ocsp2.apple.com,AntiRevoke
+HOST,valid.apple.com,AntiRevoke
+HOST,ppq.apple.com,AntiRevoke
+HOST,ppq-ext.v.aaplimg.com,AntiRevoke
+HOST,crl.apple.com,AntiRevoke
+HOST,certs.apple.com,AntiRevoke
+HOST,ocsp.digicert.com,AntiRevoke
+HOST,ocsp.digicert.cn,AntiRevoke
+HOST,crl3.digicert.com,AntiRevoke
+HOST,crl4.digicert.com,AntiRevoke
+HOST,ocsp.entrust.net,AntiRevoke
+HOST,crl.entrust.net,AntiRevoke
+HOST,ocsp.sectigo.com,AntiRevoke
+HOST,crl.sectigo.com,AntiRevoke
+HOST,ocsp.usertrust.com,AntiRevoke
+HOST,crl.usertrust.com,AntiRevoke
